@@ -58,7 +58,7 @@ const Project = () => {
 
         <div className="flex">
             <div className="py-4 basis-1/2 bg-emerald-900">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col justify-center items-center text-white text-4xl font-bold">
                         <h1>12</h1>
 
                         <p>Years Established</p>
@@ -66,10 +66,10 @@ const Project = () => {
             </div>
 
             <div className="py-4 basis-1/2 bg-black text-white">
-                    <div className="flex flex-col">
-                        <h1>12</h1>
+                    <div className="flex flex-col justify-center items-center text-white text-4xl font-bold">
+                        <h1>50</h1>
 
-                        <p>Years Established</p>
+                        <p>Projects Done</p>
                     </div>
             </div>
         </div>
