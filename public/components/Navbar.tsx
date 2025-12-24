@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -14,11 +15,11 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: "Home", href: "#", isActive: true },
-    { label: "About", href: "#about" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/", isActive: false },
+    { label: "About", href: "/about", isActive: false },
+    { label: "Portfolio", href: "/portfolio", isActive: false },
+    { label: "Pricing", href: "#pricing", isActive: false },
+    { label: "Contact", href: "/contact", isActive: false },
   ];
 
   return (
@@ -30,7 +31,7 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
-            WOSSADE REALTY
+           <Image src="/logo.png" alt="Logo" width={100} height={20}  className="h-14 w-20"/>
           </span>
         </Link>
 
@@ -71,7 +72,7 @@ const Navbar = () => {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
             {menuItems.map((item, index) => (
               <li key={index}>
-                <a
+                <Link
                   href={item.href}
                   className={`block py-2 px-3 rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 ${
                     item.isActive 
@@ -82,7 +83,7 @@ const Navbar = () => {
                   onClick={closeMenu}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -91,5 +92,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;

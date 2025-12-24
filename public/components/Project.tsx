@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="h-screen flex ">
+    <div className="lg:h-screen flex ">
       <div
         className="basis-1/3 bg-center bg-cover relative z-10 "
         style={{

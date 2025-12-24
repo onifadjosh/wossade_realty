@@ -6,12 +6,12 @@ const Header = () => {
   return (
     <div className="h-160 bg-cover bg-top bg-no-repeat flex">
       <div
-        className="  flex flex-col basis-3/4 items-start justify-center h-full lg:px-20 text-white"
+        className="  flex flex-col basis-[65%] xl:basis-3/4 items-start justify-center h-full lg:px-20 text-white"
         style={{
           backgroundImage: `url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50 w-3/4 h-160"></div>
+        <div className="absolute inset-0 bg-black opacity-50 w-[65%] xl:w-3/4 h-160"></div>
         <div className="relative z-10">
           <span className="flex items-center gap-4">
             <span className="border-l-8 h-32  border-emerald-900 "></span>
@@ -31,7 +31,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="bg-emerald-900 h-full basis-1/4 py-20 text-white px-10">
+      <div className="bg-emerald-900 h-full basis-[35%] xl:basis-1/4 py-20 text-white px-10">
         <h1 className="text-white text-4xl mb-10 font-bold /text-center">
           Our Services
         </h1>

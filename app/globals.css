@@ -1,2 +1,59 @@
 @import "tailwindcss";
 
+
+
+.head-text{
+    background: linear-gradient(white, #004F3B);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+  } */
+  .why-card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .why-card img{
+    width: 50px;
+  }
+
+  .foundation-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+    gap: 30px;
+  }
+  .service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .service-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .services ul {
+    text-align: left;
+    list-style-type: disc;
+  }
