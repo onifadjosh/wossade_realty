@@ -79,7 +79,7 @@ export default function About() {
 
         <section className="foundation bg-emerald-900 py-12">
           <h2 className="font-semibold text-white text-center text-2xl md:text-3xl">OUR FOUNDATION</h2>
-          <div className="/foundation-grid flex gap-5 container justify-center /items-center  mx-auto py-10">
+          <div className="/foundation-grid flex flex-col md:flex-row px-4 gap-5 container justify-center /items-center  mx-auto py-10">
             <div className="foundation-card bg-white p-5 rounded-2xl basis-1/3 flex items-center flex-col text-center gap-2.5">
               <Image src="/board.png" alt="wossade-realty foundation" width={50} height={50}/>
               <h3>Our Mission</h3>
@@ -149,7 +149,7 @@ export default function About() {
           <h2 className="font-semibold text-black text-center text-2xl md:text-3xl">
             WHY CHOOSE US
           </h2>
-          <div className="why-grid grid grid-cols-1 md:grid-cols-3 gap-5 container justify-center items-center  mx-auto py-10">
+          <div className="why-grid grid grid-cols-1 px-4 md:grid-cols-3 gap-5 container justify-center items-center  mx-auto py-10">
             <div className="why-card">
               <Image
                 src="/material-symbols-light_order-approve-outline-rounded.png"

@@ -9,7 +9,7 @@ const Headerr = () => {
           backgroundImage: `url(/header.jpg)`,
         }}
       >
-        <h1 className="head-text text-8xl md:text-9xl font-bold text-center">
+        <h1 className="head-text text-6xl md:text-9xl font-bold text-center">
           Wossade Realty
         </h1>
 
