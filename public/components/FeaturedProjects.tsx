@@ -5,7 +5,7 @@ const projects = [
   {
     title: "4-Bedroom Private Duplex",
     location: "Bodija, Ibadan",
-    image: "https://images.unsplash.com/photo-1600596542815-6ad4c727dd2d?q=80&w=2675&auto=format&fit=crop",
+    image: "/wossade_private_duplex.jpeg",
     description: "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials."
   },
   {
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "10-Unit Student Hostel",
     location: "Ojoo, Ibadan",
-    image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2669&auto=format&fit=crop",
+    image: "/wossade_student_hostel.jpg",
     description: "Located a few meters from the University of Ibadan, providing comfortable, secure, and self-contained units for students."
   },
    {
@@ -42,10 +42,12 @@ const FeaturedProjects = () => {
         {projects.map((project, index) => (
           <div key={index} className="group overflow-hidden rounded-xl shadow-lg bg-white hover:shadow-2xl transition-all duration-300">
             <div className="relative h-64 md:h-80 w-full overflow-hidden">
-                 <img
+                 <Image
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    width={200}
+                    height={200}
+                    className={`${index==2?"object-cover object-top /object-[top-30%_center]":"object-cover object-center"} w-full h-full group-hover:scale-110 transition-transform duration-500`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                      <p className="text-white font-medium">{project.description}</p>

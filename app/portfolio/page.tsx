@@ -1,12 +1,13 @@
 import Navbar from "@/public/components/Navbar";
 import Footer from "@/public/components/Footer";
 import React from "react";
+import Image from "next/image";
 
 const portfolioItems = [
   {
     title: "4-Bedroom Private Duplex",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1600596542815-6ad4c727dd2d?q=80&w=2675&auto=format&fit=crop",
+    image: "/wossade_private_duplex.jpeg",
     description: "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials."
   },
   {
@@ -18,7 +19,7 @@ const portfolioItems = [
   {
     title: "10-Unit Student Hostel",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2669&auto=format&fit=crop",
+    image: "/wossade_student_hostel.jpg",
     description: "Located a few meters from the University of Ibadan, providing comfortable, secure, and self-contained units for students."
   },
    {
@@ -47,10 +48,12 @@ export default function Portfolio() {
                 {portfolioItems.map((item, index) => (
                     <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
                         <div className="h-96 w-full">
-                            <img 
+                            <Image
                                 src={item.image} 
                                 alt={item.title} 
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                width={200}
+                                height={200}
                             />
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">

@@ -18,7 +18,7 @@ const Navbar = () => {
     { label: "Home", href: "/", isActive: false },
     { label: "About", href: "/about", isActive: false },
     { label: "Portfolio", href: "/portfolio", isActive: false },
-    { label: "Pricing", href: "#pricing", isActive: false },
+    // { label: "Pricing", href: "#pricing", isActive: false },
     { label: "Contact", href: "/contact", isActive: false },
   ];
 
