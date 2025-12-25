@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Headerr = () => {
@@ -13,9 +14,11 @@ const Headerr = () => {
           Wossade Realty
         </h1>
 
+        <Link href="/contact">
         <button className="px-4 py-2 bg-emerald-900 font-bold text-lg rounded-lg mt-6">
           Get in touch
         </button>
+        </Link>
       </div>
     </div>
   );

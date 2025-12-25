@@ -114,7 +114,7 @@ export default function About() {
         </section>
 
         {/* Team Section */}
-        <div className="py-20 px-4 md:px-20 bg-white">
+        {/* <div className="py-20 px-4 md:px-20 bg-white">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-emerald-900 mb-4">
               Meet Our Team
@@ -143,9 +143,9 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        <section className="why-us">
+        <section className="why-us py-10">
           <h2 className="font-semibold text-black text-center text-2xl md:text-3xl">
             WHY CHOOSE US
           </h2>
