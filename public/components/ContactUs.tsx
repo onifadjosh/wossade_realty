@@ -51,7 +51,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <p className="text-sm text-emerald-300">Email</p>
-                    <p className="font-medium">hello@wossade_realty.com</p>
+                    <p className="font-medium">wossaderealty@gmail.com</p>
                   </div>
                 </div>
 
