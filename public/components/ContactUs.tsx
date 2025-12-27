@@ -1,19 +1,29 @@
-import React from 'react';
+'use client';
+
+import React, { useActionState } from 'react';
+import { sendEmail } from '@/app/actions/send-email';
+
+const initialState = {
+    success: false,
+    message: ''
+}
 
 const ContactUs = () => {
+  const [state, formAction, isPending] = useActionState(sendEmail, initialState);
+
   return (
-    <div className="py-20 px-4 md:px-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="py-20 px-4 md:px-10 bg-gray-50">
+      <div className="max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold text-emerald-900 mb-4">Get In Touch</h1>
           <p className="text-xl text-gray-600">
-            Have a project in mind? Let's build something great together.
+            Have a project in mind? Let&apos;s build something great together.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-10 bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Contact Info */}
-          <div className="lg:w-1/3 bg-emerald-900 p-10 text-white flex flex-col justify-between">
+          <div className="lg:w-[40%] bg-emerald-900 p-10 text-white flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <p className="mb-8 text-emerald-100">
@@ -29,7 +39,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <p className="text-sm text-emerald-300">Phone</p>
-                    <p className="font-medium">+234 123 456 7890</p>
+                    <p className="font-medium">+2349069663640 </p>
                   </div>
                 </div>
 
@@ -54,7 +64,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <p className="text-sm text-emerald-300">Address</p>
-                    <p className="font-medium">123 Construction Ave, Lagos</p>
+                    <p className="font-medium">WOSSADE REALTY, Close to University of Ibadan second gate  behind First bank ojo  Ibadan Oyo State</p>
                   </div>
                 </div>
               </div>
@@ -78,36 +88,49 @@ const ContactUs = () => {
 
           {/* Form */}
           <div className="lg:w-2/3 p-10">
-            <form className="flex flex-col gap-6">
+            <form action={formAction} className="flex flex-col gap-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="firstName" className="text-sm font-semibold text-gray-700">First Name</label>
-                  <input type="text" id="firstName" placeholder="John" className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
+                  <input name="firstName" type="text" id="firstName" placeholder="John" required className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
                 </div>
                  <div className="flex flex-col gap-2">
                   <label htmlFor="lastName" className="text-sm font-semibold text-gray-700">Last Name</label>
-                  <input type="text" id="lastName" placeholder="Doe" className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
+                  <input name="lastName" type="text" id="lastName" placeholder="Doe" required className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
                 </div>
               </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="email" className="text-sm font-semibold text-gray-700">Email Address</label>
-                  <input type="email" id="email" placeholder="john@example.com" className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
+                  <input name="email" type="email" id="email" placeholder="john@example.com" required className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
                 </div>
                  <div className="flex flex-col gap-2">
                   <label htmlFor="phone" className="text-sm font-semibold text-gray-700">Phone Number</label>
-                  <input type="tel" id="phone" placeholder="+234..." className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
+                  <input name="phone" type="tel" id="phone" placeholder="+234..." className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"/>
                 </div>
               </div>
 
                <div className="flex flex-col gap-2">
                    <label htmlFor="message" className="text-sm font-semibold text-gray-700">Message</label>
-                   <textarea id="message" rows={4} placeholder="Tell us about your project..." className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all resize-none"></textarea>
+                   <textarea name="message" id="message" rows={4} placeholder="Tell us about your project..." required className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:bg-white transition-all resize-none"></textarea>
                </div>
 
-               <button type="button" className="bg-emerald-900 text-white font-bold py-4 rounded-lg hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-900/20">
-                  Send Message
+                {state?.message && (
+                    <div className={`p-4 rounded-lg ${state.success ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}`}>
+                        {state.message}
+                    </div>
+                )}
+
+               <button type="submit" disabled={isPending} className="bg-emerald-900 text-white font-bold py-4 rounded-lg hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-900/20 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center">
+                  {isPending ? (
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                  ) : (
+                      "Send Message"
+                  )}
                </button>
             </form>
           </div>

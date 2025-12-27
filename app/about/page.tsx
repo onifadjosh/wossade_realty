@@ -5,28 +5,64 @@ import React from "react";
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "CEO & Founder",
+    name: "Sefiyat Olaide Akande Tijani",
+    role: "Chairman & Founder",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop",
+      "/wossade-ceo.jpeg",
   },
+  
   {
-    name: "Jane Smith",
-    role: "Chief Architect",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop",
-  },
-  {
-    name: "Michael Brown",
+    name: "Arch Olumide Fetuga",
     role: "Project Manager",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop",
+      "/wossade-project-manager.jpeg",
   },
   {
-    name: "Sarah Williams",
-    role: "Interior Designer",
+    name: "Afolabi Adewale Segun",
+    role: " Supply and Purchasing manager",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2661&auto=format&fit=crop",
+      "/wossade-supply.jpeg",
+  },
+  {
+    name: "Yemi Kasali",
+    role: "Client Representative",
+    image:
+      "/wossade-yemi.jpeg",
+  },
+  {
+    name: "Azeez Opeyemi Idris",
+    role: "Site Manager",
+    image:
+      "/wossade-site-manager.jpeg",
+  },
+  {
+    name: "Oni Olanrewaju Emmanuel",
+    role: "Architect",
+    image:
+      "/wossade-arch1.jpeg",
+  },
+  {
+    name: "Yomi Adegasi",
+    role: "Architect",
+    image:
+      "/wossade-arch2.jpeg",
+  },
+
+  
+  
+
+  {
+    name: "Peace Komolafe",
+    role: "Marketing Executive",
+    image:
+      "/wossade-marketing.jpeg",
+  },
+
+  {
+    name: "Ayanfe Oyedokun",
+    role: "Store Manager",
+    image:
+      "/ayanfe.jpeg",
   },
 ];
 
@@ -114,7 +150,7 @@ export default function About() {
         </section>
 
         {/* Team Section */}
-        {/* <div className="py-20 px-4 md:px-20 bg-white">
+        <div className="py-20 px-4 md:px-20 bg-white">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-emerald-900 mb-4">
               Meet Our Team
@@ -124,7 +160,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 justify-center items-center place-content-center place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center group">
                 <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-emerald-100 group-hover:border-emerald-900 transition-colors duration-300">
@@ -143,7 +179,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
 
         <section className="why-us py-10">
           <h2 className="font-semibold text-black text-center text-2xl md:text-3xl">
