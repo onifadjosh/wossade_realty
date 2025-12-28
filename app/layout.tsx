@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Wossade Realty",
     images: [
       {
-        url: "/logo.png", // Fallback to logo or use a specific OG image
+        url: "/opengraph-image.png", // Fallback to logo or use a specific OG image
         width: 1200,
         height: 630,
         alt: "Wossade Realty",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wossade Realty | Building Excellence",
     description: "Premium real estate development and construction services in Nigeria.",
-    images: ["/logo.png"],
+    images: ["/opengraph-image.png"],
     creator: "@wossaderealty", // Update if handle exists
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   robots: {
     index: true,
