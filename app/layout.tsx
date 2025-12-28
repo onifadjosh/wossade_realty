@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     creator: "@wossaderealty", // Update if handle exists
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   robots: {
     index: true,
