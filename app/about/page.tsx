@@ -21,7 +21,7 @@ const teamMembers = [
     name: "Afolabi Adewale Segun",
     role: " Supply and Purchasing manager",
     image:
-      "/wossade-supply.jpeg",
+      "/wossade_afolabi.jpeg",
   },
   {
     name: "Yemi Kasali",
@@ -39,13 +39,13 @@ const teamMembers = [
     name: "Oni Olanrewaju Emmanuel",
     role: "Architect",
     image:
-      "/wossade-arch1.jpeg",
+      "/wossade_oni.jpeg",
   },
   {
     name: "Yomi Adegasi",
     role: "Architect",
     image:
-      "/wossade-arch2.jpeg",
+      "/wossade_yomi.jpeg",
   },
 
   
@@ -86,7 +86,7 @@ export default function About() {
             <div>
               <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/wossade-team.jpeg"
+                  src="/wossade-team-header.jpeg"
                   alt="Construction Site"
                   className="object-cover object-top w-full h-full"
                   width={600}
@@ -129,7 +129,7 @@ export default function About() {
               <Image src="/eye.png" alt="wossade-realty foundation" width={50} height={50}/>
               <h3>Our Vision</h3>
               <p>
-                To be a leading construction company in Nigeria and across
+                Building a home to remember. To be a leading construction company in Nigeria and across
                 Africa, recognized for excellence, reliability, and sustainable
                 infrastructure development.
               </p>

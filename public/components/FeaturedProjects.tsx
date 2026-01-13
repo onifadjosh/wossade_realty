@@ -5,7 +5,7 @@ const projects = [
   {
     title: "4-Bedroom Private Duplex",
     location: "Bodija, Ibadan",
-    image: "/wossade_private_duplex.jpeg",
+    image: "/wossade-four-bed.jpeg",
     description: "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials."
   },
   {
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "10-Unit Student Hostel",
     location: "Ojoo, Ibadan",
-    image: "/wossade_student_hostel.jpg",
+    image: "/wossade_hostel.jpg",
     description: "Located a few meters from the University of Ibadan, providing comfortable, secure, and self-contained units for students."
   },
    {
@@ -47,7 +47,7 @@ const FeaturedProjects = () => {
                     alt={project.title}
                     width={200}
                     height={200}
-                    className={`${index==2?"object-cover object-top /object-[top-30%_center]":"object-cover object-center"} w-full h-full group-hover:scale-110 transition-transform duration-500`}
+                    className={`${index==2?"object-cover object-center /object-[top-30%_center]":"object-cover object-center"} w-full h-full group-hover:scale-110 transition-transform duration-500`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                      <p className="text-white font-medium">{project.description}</p>
