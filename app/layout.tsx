@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://wossaderealty.com",
+    url: "https://wossade-realty.com",
     title: "Wossade Realty | Building Excellence",
     description: "Delivering world-class residential and commercial properties with integrity and innovation.",
     siteName: "Wossade Realty",
