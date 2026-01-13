@@ -7,7 +7,7 @@ const portfolioItems = [
   {
     title: "4-Bedroom Private Duplex",
     category: "Residential",
-    image: "/wossade_private_duplex.jpeg",
+    image: "/wossade-four-bed.jpeg",
     description: "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials."
   },
   {
@@ -19,7 +19,7 @@ const portfolioItems = [
   {
     title: "10-Unit Student Hostel",
     category: "Residential",
-    image: "/wossade_student_hostel.jpg",
+    image: "/wossade_hostell.jpeg",
     description: "Located a few meters from the University of Ibadan, providing comfortable, secure, and self-contained units for students."
   },
    {
