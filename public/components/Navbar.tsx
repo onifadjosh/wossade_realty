@@ -31,7 +31,7 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
-           <Image src="/logo.png" alt="Logo" width={100} height={20}  className="h-14 w-20"/>
+           <img src="/logo.png?v=new" alt="Logo" width={100} height={20}  className="h-14 w-14"/>
           </span>
         </Link>
 
