@@ -46,7 +46,8 @@ const services = [
     items: [
       "Design and build",
       "Management contracting",
-      "Subcontracting works"
+      "Subcontracting works",
+      "Airbnb short-let apartments in Bodija, Ibadan and UI Second Gate"
     ]
   },
   {
@@ -96,22 +97,22 @@ const services = [
 
 const OurServices = () => {
   return (
-    <div className="py-20 bg-gray-50">
-      <div className="text-center flex flex-col gap-4 mb-16 px-4">
-        <h1 className="font-semibold text-emerald-900 text-center text-3xl md:text-5xl">
+    <section id="services" className="py-20 md:py-24 bg-gray-50/80">
+      <div className="text-center flex flex-col gap-4 mb-16 px-4 max-w-3xl mx-auto">
+        <h2 className="font-bold text-emerald-900 text-3xl md:text-4xl lg:text-5xl tracking-tight">
           Our Services
-        </h1>
-        <p className="md:text-xl text-lg text-gray-600 max-w-2xl mx-auto">
+        </h2>
+        <p className="text-lg md:text-xl text-gray-600">
           Comprehensive construction and infrastructure solutions tailored to
           meet your project needs with precision and excellence.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4 md:px-20 max-w-[1400px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 lg:px-12 max-w-6xl mx-auto">
         {services.map((service, index) => (
-          <div 
-            key={index} 
-            className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          <div
+            key={index}
+            className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100"
           >
             <div className="mb-6 text-emerald-900 bg-emerald-50 w-20 h-20 rounded-2xl flex items-center justify-center group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-300">
               {service.icon}
@@ -145,7 +146,7 @@ const OurServices = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

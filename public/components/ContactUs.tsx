@@ -12,16 +12,18 @@ const ContactUs = () => {
   const [state, formAction, isPending] = useActionState(sendEmail, initialState);
 
   return (
-    <div className="py-20 px-4 md:px-10 bg-gray-50">
-      <div className="max-w-8xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-5xl font-bold text-emerald-900 mb-4">Get In Touch</h1>
-          <p className="text-xl text-gray-600">
+    <section id="contact" className="py-20 md:py-24 px-4 md:px-8 bg-gray-50/80">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4 tracking-tight">
+            Get In Touch
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600">
             Have a project in mind? Let&apos;s build something great together.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-10 bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-0 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
           {/* Contact Info */}
           <div className="lg:w-[40%] bg-emerald-900 p-10 text-white flex flex-col justify-between">
             <div>
@@ -87,7 +89,7 @@ const ContactUs = () => {
           </div>
 
           {/* Form */}
-          <div className="lg:w-2/3 p-10">
+          <div className="lg:w-[60%] p-8 md:p-10">
             <form action={formAction} className="flex flex-col gap-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
@@ -136,7 +138,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -30,39 +30,50 @@ const equipment = [
 
 const OurEquipment = () => {
   return (
-    <div className="py-20 px-4 md:px-20 bg-emerald-900 text-white">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div className='max-w-2xl'>
-                 <h1 className="text-3xl md:text-5xl font-bold mb-4">World-Class Equipment</h1>
-                <p className="text-emerald-100 text-lg">
-                    We rely on industry-leading machinery to ensure precision, efficiency, and safety in every project we undertake.
-                </p>
-            </div>
-           
-            <button className="border border-white hover:bg-white hover:text-emerald-900 px-6 py-2 transition-colors">
-                View Fleet
-            </button>
+    <section className="py-20 md:py-24 px-4 md:px-8 bg-emerald-900 text-white overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-14">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
+              World-Class Equipment
+            </h2>
+            <p className="text-emerald-100 text-lg md:text-xl">
+              We rely on industry-leading machinery to ensure precision, efficiency, and safety in every project we undertake.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="shrink-0 rounded-xl border-2 border-white/80 px-6 py-3 font-semibold hover:bg-white hover:text-emerald-900 transition-colors"
+          >
+            View Fleet
+          </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {equipment.map((item, index) => (
-                <div key={index} className="bg-emerald-800 p-4 pb-6 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-                    <div className="h-48 w-full overflow-hidden rounded mb-4 bg-emerald-700">
-                         <img 
-                            src={item.image} 
-                            alt={item.name} 
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                        />
-                    </div>
-                    <h3 className="text-xl font-bold mb-1">{item.name}</h3>
-                    <p className="text-emerald-300 text-sm mb-2">{item.model}</p>
-                    <div className='w-full h-[1px] bg-emerald-700 my-3'></div>
-                     <p className="text-emerald-100 text-xs font-mono">{item.specs}</p>
-                </div>
-            ))}
+          {equipment.map((item, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-emerald-800/80 backdrop-blur-sm border border-white/10 overflow-hidden hover:-translate-y-1 hover:border-white/20 transition-all duration-300"
+            >
+              <div className="h-44 w-full overflow-hidden bg-emerald-700/50">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold mb-1">{item.name}</h3>
+                <p className="text-emerald-300 text-sm mb-3">{item.model}</p>
+                <div className="h-px bg-emerald-700/80 my-3" />
+                <p className="text-emerald-100 text-xs font-mono">{item.specs}</p>
+              </div>
+            </div>
+          ))}
         </div>
-    </div>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
 export default OurEquipment

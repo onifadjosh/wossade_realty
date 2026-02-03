@@ -84,7 +84,7 @@ export default function About() {
         <div className="py-20 px-4 md:px-20 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-xl bg-gray-200">
                 <Image
                   src="/wossade-team-header.jpeg"
                   alt="Construction Site"
@@ -163,13 +163,13 @@ export default function About() {
           <div className="grid grid-cols-1 justify-center items-center place-content-center place-items-center sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center group">
-                <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-emerald-100 group-hover:border-emerald-900 transition-colors duration-300">
+                <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-emerald-100 group-hover:border-emerald-900 transition-colors duration-300 bg-gray-200">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={200}
-                    height={200}
-                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    sizes="192px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
