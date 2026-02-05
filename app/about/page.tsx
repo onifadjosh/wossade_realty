@@ -194,7 +194,7 @@ export default function About() {
                 height={40}
               />
               <h3>Proven Experience</h3>
-              <p>Over 18 years delivering successful projects nationwide.</p>
+              <p>Over 5 years delivering successful projects nationwide.</p>
             </div>
 
             <div className="why-card">
@@ -245,7 +245,7 @@ export default function About() {
               />
               <h3>Trusted by Institutions</h3>
               <p>
-                Worked with FERMA, OAU, Cocoa Research Institute, and top banks.
+                Worked with a handful of organizations to erect their desired structure and bring their plans to life.
               </p>
             </div>
           </div>
