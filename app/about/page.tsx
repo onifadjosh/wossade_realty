@@ -51,12 +51,12 @@ const teamMembers = [
   
   
 
-  {
-    name: "Peace Komolafe",
-    role: "Marketing Executive",
-    image:
-      "/wossade-marketing.jpeg",
-  },
+  // {
+  //   name: "Peace Komolafe",
+  //   role: "Marketing Executive",
+  //   image:
+  //     "/wossade-marketing.jpeg",
+  // },
 
   {
     name: "Ayanfe Oyedokun",

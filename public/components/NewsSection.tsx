@@ -14,16 +14,23 @@ const newsItems: NewsItem[] = [
   {
     title: "Wossade Realty Debuts in Ibadan, Eyes Affordable Housing",
     source: "Punch Nigeria",
-    date: "2024",
+    date: "2026",
     url: "https://punchng.com/wossade-realty-debuts-in-ibadan-eyes-affordable-housing/",
-    image: "/wossade-team-header.jpeg", // Replace with actual article image
+    image: "/wossade_estate.webp", // Replace with actual article image
   },
   {
     title: "Wossade Realty Commissioned in Ibadan, Targets Affordable Housing & Global Expansion",
     source: "Daily Economy",
-    date: "2024",
+    date: "2026",
     url: "https://dailyeconomy.ng/wossade-realty-commissioned-in-ibadan-targets-affordable-housing-global-expansion/",
-    image: "/wossade-team.jpeg", // Replace with actual article image
+    image: "/news.jpeg",
+  },
+  {
+    title: "Real estate firm opens operations, targets affordable housing, global expansion",
+    source: "Vanguard Nigeria",
+    date: "2026",
+    url: "https://www.vanguardngr.com/2026/01/real-estate-firm-opens-operations-targets-affordable-housing-global-expansion/",
+    image: "/news.jpeg", 
   },
 ];
 
