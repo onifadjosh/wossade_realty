@@ -7,6 +7,7 @@ import NewsSection from "@/public/components/NewsSection";
 import OurEquipment from "@/public/components/OurEquipment";
 import ContactUs from "@/public/components/ContactUs";
 import Footer from "@/public/components/Footer";
+import SocialMediaModal from "@/public/components/SocialMediaModal";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <OurEquipment />
       <ContactUs />
       <Footer />
+      <SocialMediaModal />
     </>
   );
 }
