@@ -1,7 +1,9 @@
+"use client"
 import Navbar from "@/public/components/Navbar";
 import Footer from "@/public/components/Footer";
 import React from "react";
 import Image from "next/image";
+import VideoShowcase from "@/public/components/VideoShowcase";
 
 const portfolioItems = [
   {
@@ -13,7 +15,7 @@ const portfolioItems = [
   {
     title: "3-Bedroom Short-Let Apartment",
     category: "Hospitality",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2670&auto=format&fit=crop",
+    image: "/wossade_bodija.jpeg",
     description: "A contemporary duplex designed specifically for short-stay clients seeking comfort, exclusivity, and a serene environment."
   },
   {
@@ -25,7 +27,7 @@ const portfolioItems = [
    {
     title: "Twin Duplex Development",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop",
+    image: "/wossade_lekron.jpeg",
     description: "Ongoing luxury twin duplex project designed for premium living with modern architecture and high-end finishing materials."
   }
 ];
@@ -66,6 +68,7 @@ export default function Portfolio() {
             </div>
             
         </div>
+        <VideoShowcase />
       </div>
       <Footer />
     </>

@@ -12,7 +12,7 @@ const projects = [
   {
     title: "3-Bedroom Short-Let Apartment",
     location: "Bodija, Ibadan",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2670&auto=format&fit=crop",
+    image: "/wossade_bodija.jpeg",
     description: "A contemporary duplex designed specifically for short-stay clients seeking comfort, exclusivity, and a serene environment."
   },
   {
@@ -24,7 +24,7 @@ const projects = [
    {
     title: "Twin Duplex Development",
     location: "Lekron Layout, Bodija GRA",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop",
+    image: "/wossade_lekron.jpeg",
     description: "Ongoing luxury twin duplex project designed for premium living with modern architecture and high-end finishing materials."
   }
 ];
