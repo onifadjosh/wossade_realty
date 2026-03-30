@@ -1,6 +1,7 @@
 import Navbar from "@/public/components/Navbar";
 import Footer from "@/public/components/Footer";
 import ContactUs from "@/public/components/ContactUs";
+import Link from "next/link";
 import React from "react";
 
 export default function ContactPage() {
@@ -12,6 +13,17 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto">
             We are here to answer any questions you may have about our experiences.
+          </p>
+          <p className="mt-6 text-sm md:text-base text-emerald-200/90 max-w-2xl mx-auto">
+            Booking a stay? Check-in 2:00 p.m., check-out 12:00 noon. Full terms,
+            payment, and visitor rules are on our{" "}
+            <Link
+              href="/house-rules"
+              className="font-semibold text-white underline underline-offset-2 hover:text-emerald-50"
+            >
+              house rules
+            </Link>{" "}
+            page.
           </p>
         </div>
         
