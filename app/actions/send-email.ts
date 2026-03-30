@@ -2,7 +2,13 @@
 
 import nodemailer from 'nodemailer';
 
-export async function sendEmail(prevState: any, formData: FormData) {
+// Define the state type for the form action
+type FormState = {
+  success: boolean;
+  message: string;
+} | null;
+
+export async function sendEmail(prevState: FormState, formData: FormData): Promise<FormState> {
   const firstName = formData.get('firstName') as string;
   const lastName = formData.get('lastName') as string;
   const email = formData.get('email') as string;
@@ -37,15 +43,15 @@ export async function sendEmail(prevState: any, formData: FormData) {
       },
     });
 
-    // Filter out undefined/null recipients
-    const recipients = [
-      process.env.CONTACT_EMAIL || process.env.SMTP_USER,
-      process.env.ADMIN_ACCT
-    ].filter(Boolean);
+    // Build recipients array and ensure all values are strings
+    const recipients: string[] = [];
+    const primaryContact = process.env.CONTACT_EMAIL || process.env.SMTP_USER;
+    if (primaryContact) recipients.push(primaryContact);
+    if (process.env.ADMIN_ACCT) recipients.push(process.env.ADMIN_ACCT);
 
     const mailOptions = {
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: recipients,
+      to: recipients.length > 0 ? recipients : process.env.SMTP_USER,
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       text: `
 Name: ${firstName} ${lastName}
