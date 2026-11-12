@@ -46,7 +46,7 @@ export default function SocialMediaModal() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">For Booking (WhatsApp/Call)</h3>
-                <p className="text-gray-600 font-medium">+234 803 860 8112, 07082935516</p>
+                <p className="text-gray-600 font-medium">0813 118 0078, +1346 7737627, 0803 860 8112</p>
               </div>
             </div>
 

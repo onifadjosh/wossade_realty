@@ -1,74 +1,72 @@
-import React from 'react';
+import React from "react";
 
 const equipment = [
-    {
-        name: "Excavators",
-        model: "CAT 320 GC",
-        image: "https://thumbs.dreamstime.com/b/excavator-22093537.jpg",
-        specs: "20 Ton Operating Weight"
-    },
-    {
-        name: "Bulldozers",
-        model: "CAT D6T",
-        image: "https://images.unsplash.com/photo-1629807473015-41699c4471b5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVsbGRvemVyfGVufDB8fDB8fHww",
-        specs: "200 HP Net Power"
-    },
-    {
-        name: "Cranes",
-        model: "Liebherr LTM 11200",
-        image: "https://elebia.com/wp-content/uploads/2020/07/type-of-mobile-cranes.jpg",
-        specs: "1200 Ton Max Capacity"
-    },
-    {
-        name: "Loaders",
-        model: "CAT 950 GC",
-        image: "https://media.istockphoto.com/id/520735876/photo/heavy-equipment-machine-wheel-loader-on-construction-jobsite.jpg?s=612x612&w=0&k=20&c=GcuhLFlzXZHyZmcmAG-PmPnvQZBJGJwVurSi8K5xK10=",
-        specs: "18 Ton Operating Weight"
-    }
-
-]
+  {
+    name: "Excavators",
+    model: "CAT 320 GC",
+    image: "https://thumbs.dreamstime.com/b/excavator-22093537.jpg",
+    specs: "20 ton operating weight",
+  },
+  {
+    name: "Bulldozers",
+    model: "CAT D6T",
+    image:
+      "https://images.unsplash.com/photo-1629807473015-41699c4471b5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVsbGRvemVyfGVufDB8fDB8fHww",
+    specs: "200 HP net power",
+  },
+  {
+    name: "Cranes",
+    model: "Liebherr LTM 11200",
+    image: "https://elebia.com/wp-content/uploads/2020/07/type-of-mobile-cranes.jpg",
+    specs: "1,200 ton max capacity",
+  },
+  {
+    name: "Loaders",
+    model: "CAT 950 GC",
+    image:
+      "https://media.istockphoto.com/id/520735876/photo/heavy-equipment-machine-wheel-loader-on-construction-jobsite.jpg?s=612x612&w=0&k=20&c=GcuhLFlzXZHyZmcmAG-PmPnvQZBJGJwVurSi8K5xK10=",
+    specs: "18 ton operating weight",
+  },
+];
 
 const OurEquipment = () => {
   return (
-    <section className="py-20 md:py-24 px-4 md:px-8 bg-emerald-900 text-white overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-14">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
-              World-Class Equipment
-            </h2>
-            <p className="text-emerald-100 text-lg md:text-xl">
-              We rely on industry-leading machinery to ensure precision, efficiency, and safety in every project we undertake.
-            </p>
-          </div>
-          <button
-            type="button"
-            className="shrink-0 rounded-xl border-2 border-white/80 px-6 py-3 font-semibold hover:bg-white hover:text-emerald-900 transition-colors"
-          >
-            View Fleet
-          </button>
+    <section className="bg-white">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+        <div className="max-w-2xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-800">
+            On site
+          </p>
+          <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-[-0.03em] text-[#10241c]">
+            Plant we put on the job.
+          </h2>
+          <p className="mt-4 text-lg text-[#10241c]/65 leading-relaxed">
+            Excavators, dozers, cranes, and loaders for the groundwork before
+            the finishes go in.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {equipment.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-2xl bg-emerald-800/80 backdrop-blur-sm border border-white/10 overflow-hidden hover:-translate-y-1 hover:border-white/20 transition-all duration-300"
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {equipment.map((item) => (
+            <article
+              key={item.name}
+              className="overflow-hidden rounded-2xl border border-[#10241c]/8 bg-[#f4f0e8]"
             >
-              <div className="h-44 w-full overflow-hidden bg-emerald-700/50">
+              <div className="h-40 overflow-hidden bg-[#e7e1d6]">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="h-full w-full object-cover"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold mb-1">{item.name}</h3>
-                <p className="text-emerald-300 text-sm mb-3">{item.model}</p>
-                <div className="h-px bg-emerald-700/80 my-3" />
-                <p className="text-emerald-100 text-xs font-mono">{item.specs}</p>
+              <div className="p-4">
+                <h3 className="font-semibold text-[#10241c]">{item.name}</h3>
+                <p className="mt-1 text-sm text-emerald-800">{item.model}</p>
+                <p className="mt-3 text-xs tracking-wide text-[#10241c]/55">
+                  {item.specs}
+                </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
@@ -76,4 +74,4 @@ const OurEquipment = () => {
   );
 };
 
-export default OurEquipment
+export default OurEquipment;

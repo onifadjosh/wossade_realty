@@ -1,70 +1,77 @@
-"use client"
 import React from "react";
-
 
 const videos = [
   {
+    url: "/videos/downtown-ibadan.mp4",
+    title: "Downtown luxury apartment",
+  },
+  {
+    url: "/videos/blue-duplex.mp4",
+    title: "Blue duplex",
+  },
+  {
     url: "https://res.cloudinary.com/dbbng3r4y/video/upload/v1772688979/Property_1_wsh9o4.mov",
-    title: "Luxury Property Tour 1",
+    title: "Property tour 01",
   },
   {
     url: "https://res.cloudinary.com/dbbng3r4y/video/upload/v1772689318/Property_2_fgewdz.mov",
-    title: "Luxury Property Tour 2",
+    title: "Property tour 02",
   },
   {
     url: "https://res.cloudinary.com/dbbng3r4y/video/upload/v1772689623/Property_3_flcshi.mov",
-    title: "Luxury Property Tour 3",
+    title: "Property tour 03",
   },
   {
     url: "https://res.cloudinary.com/dbbng3r4y/video/upload/v1772689837/Property_4_liyh1u.mov",
-    title: "Luxury Property Tour 4",
+    title: "Property tour 04",
   },
   {
     url: "https://res.cloudinary.com/dbbng3r4y/video/upload/v1772689909/Property_5_cxagv5.mov",
-    title: "Luxury Property Tour 5",
+    title: "Property tour 05",
   },
 ];
 
 const VideoShowcase = () => {
   return (
-    <section id="videos" className="py-20 md:py-24 px-4 md:px-8 bg-gray-50">
-      <div className="max-w-6xl mx-auto mb-14 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4 tracking-tight">
-          Exquisite Property Tours
-        </h2>
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-          Experience our latest developments through these cinematic property showcases, highlighting modern architecture and premium finishes.
+    <section id="videos" className="bg-[#0c1f17] text-white scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-20 md:pt-28">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-300">
+          Walk through
         </p>
+        <div className="mt-3 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.03em] max-w-xl">
+            The rooms, not just the facade.
+          </h2>
+          <p className="max-w-sm text-white/60 leading-relaxed">
+            Seven tours of recent Wossade homes. Press play and move through
+            the finishes.
+          </p>
+        </div>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-10 flex gap-4 overflow-x-auto snap-x snap-mandatory px-5 sm:px-8 pb-20 md:pb-28 max-w-[90rem] mx-auto">
         {videos.map((video, index) => (
-          <div
-            key={index}
-            className="group overflow-hidden rounded-2xl shadow-lg bg-white border border-gray-100 hover:shadow-2xl transition-all duration-300"
+          <figure
+            key={video.url}
+            className="snap-start shrink-0 w-[82%] sm:w-[420px]"
           >
-            <div className="relative aspect-video w-full overflow-hidden bg-black">
+            <div className="overflow-hidden rounded-2xl bg-black aspect-[4/5] sm:aspect-[3/4]">
               <video
                 src={video.url}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
                 controls
                 preload="metadata"
-                onMouseOver={(e) => e.currentTarget.play()}
-                onMouseOut={(e) => e.currentTarget.pause()}
+                playsInline
                 muted
               />
-              <div className="absolute top-4 left-4">
-                 <span className="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                    Tour {index + 1}
-                 </span>
-              </div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-emerald-900">
-                {video.title}
-              </h3>
-            </div>
-          </div>
+            <figcaption className="mt-3 flex items-baseline gap-2 text-sm">
+              <span className="text-white/40 tabular-nums">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span className="font-medium">{video.title}</span>
+            </figcaption>
+          </figure>
         ))}
       </div>
     </section>

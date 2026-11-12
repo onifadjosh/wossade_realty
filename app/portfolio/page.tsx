@@ -1,76 +1,106 @@
-"use client"
 import Navbar from "@/public/components/Navbar";
 import Footer from "@/public/components/Footer";
-import React from "react";
-import Image from "next/image";
+import PageHeader from "@/public/components/PageHeader";
 import VideoShowcase from "@/public/components/VideoShowcase";
+import Image from "next/image";
+import React from "react";
 
 const portfolioItems = [
   {
     title: "4-Bedroom Private Duplex",
     category: "Residential",
     image: "/wossade_four.jpeg",
-    description: "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials."
+    description:
+      "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials.",
   },
   {
     title: "3-Bedroom Short-Let Apartment",
     category: "Hospitality",
     image: "/wossade_bodija.jpeg",
-    description: "A contemporary duplex designed specifically for short-stay clients seeking comfort, exclusivity, and a serene environment."
+    description:
+      "A contemporary duplex designed specifically for short-stay clients seeking comfort, exclusivity, and a serene environment.",
   },
   {
     title: "10-Unit Student Hostel",
     category: "Residential",
     image: "/wossade_hostell.jpeg",
-    description: "Located a few meters from the University of Ibadan, providing comfortable, secure, and self-contained units for students."
+    description:
+      "Located a few meters from the University of Ibadan, providing comfortable, secure, and self-contained units for students.",
   },
-   {
+  {
     title: "Twin Duplex Development",
     category: "Residential",
     image: "/wossade_lekron.jpeg",
-    description: "Ongoing luxury twin duplex project designed for premium living with modern architecture and high-end finishing materials."
-  }
+    description:
+      "Ongoing luxury twin duplex project designed for premium living with modern architecture and high-end finishing materials.",
+  },
 ];
 
 export default function Portfolio() {
-  return (
-    <>
-      <Navbar />
-      <div className="pt-24 min-h-screen bg-white">
-          <div className="bg-emerald-900 text-white py-20 px-4 md:px-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Portfolio</h1>
-          <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto">
-             A range of residential and multi-unit projects across Ibadan, reflecting our commitment to quality workmanship.
-          </p>
-        </div>
+  const [lead, ...rest] = portfolioItems;
 
-        <div className="py-20 px-4 md:px-20 max-w-7xl mx-auto">
-            {/* Gallery Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {portfolioItems.map((item, index) => (
-                    <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
-                        <div className="relative h-96 w-full bg-gray-100">
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                            />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                            <span className="text-emerald-400 font-medium text-sm tracking-wider uppercase mb-2 bg-emerald-900/50 w-fit px-2 py-1 rounded">{item.category}</span>
-                            <h3 className="text-3xl font-bold text-white mb-3">{item.title}</h3>
-                            <p className="text-gray-200 text-lg leading-relaxed">{item.description}</p>
-                        </div>
-                    </div>
-                ))}
+  return (
+    <main className="bg-[#f4f0e8]">
+      <Navbar />
+      <PageHeader eyebrow="Selected work" title="Homes across Ibadan.">
+        Residential and multi-unit projects, from private duplexes to a hostel
+        a few metres from the University of Ibadan.
+      </PageHeader>
+
+      <section className="px-5 sm:px-8 pb-8 md:pb-12">
+        <div className="max-w-6xl mx-auto">
+          <article className="grid lg:grid-cols-12 overflow-hidden rounded-[1.75rem] bg-white">
+            <div className="relative lg:col-span-7 min-h-[280px] sm:min-h-[420px]">
+              <Image
+                src={lead.image}
+                alt={lead.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
+              />
             </div>
-            
+            <div className="lg:col-span-5 flex flex-col justify-center p-7 sm:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
+                {lead.category}
+              </p>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#10241c]">
+                {lead.title}
+              </h2>
+              <p className="mt-4 text-[#10241c]/70 leading-relaxed">
+                {lead.description}
+              </p>
+            </div>
+          </article>
+
+          <div className="mt-5 grid md:grid-cols-3 gap-5">
+            {rest.map((item) => (
+              <article key={item.title}>
+                <div className="relative h-64 overflow-hidden rounded-2xl bg-[#e7e1d6]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
+                  {item.category}
+                </p>
+                <h2 className="mt-1 text-xl font-semibold tracking-tight text-[#10241c]">
+                  {item.title}
+                </h2>
+                <p className="mt-2 text-sm text-[#10241c]/65 leading-relaxed">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
-        <VideoShowcase />
-      </div>
+      </section>
+
+      <VideoShowcase />
       <Footer />
-    </>
+    </main>
   );
 }

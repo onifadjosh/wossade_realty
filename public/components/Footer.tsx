@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-900 text-white pt-20 pb-10">
+    <footer className="bg-[#0c1f17] text-white pt-20 pb-10">
       <div className="max-w-6xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         {/* Column 1: Brand */}
         <div>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 md:px-8 pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
         <p>&copy; {currentYear} Wossade Realty. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

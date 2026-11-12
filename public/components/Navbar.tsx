@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="Wossade Realty"
             width={56}
             height={56}
-            className="h-12 w-auto md:h-14 drop-shadow-sm"
+            className="h-11 w-auto md:h-12 rounded-lg drop-shadow-sm"
           />
         </Link>
 
@@ -81,21 +81,31 @@ const Navbar = () => {
           id="navbar-default"
         >
           <ul className="flex flex-col md:flex-row md:items-center gap-1 py-4 px-4 md:px-0 md:py-0 md:gap-0 md:space-x-1">
-            {menuItems.map((item) => (
+            {menuItems.map((item) => {
+              const active = pathname === item.href;
+              return (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block py-2.5 px-4 rounded-xl font-medium transition-colors md:px-3 md:py-2 ${
+                  aria-current={active ? "page" : undefined}
+                  className={`block py-2.5 px-4 rounded-full text-sm font-medium transition-colors md:px-3 md:py-2 ${
+                    active
+                      ? "bg-emerald-50 text-emerald-900"
+                      : "text-gray-800 max-md:hover:bg-gray-100"
+                  } ${
                     useLightNav
-                      ? "text-gray-700 hover:bg-gray-200/50 hover:text-gray-900 md:hover:bg-emerald-50 md:hover:text-emerald-800"
-                      : "text-gray-800 md:text-white/95 hover:bg-gray-200/60 md:hover:bg-white/20 md:hover:text-white md:hover:bg-white/15"
+                      ? "md:hover:bg-emerald-50 md:hover:text-emerald-800"
+                      : active
+                        ? "md:bg-white/15 md:text-white"
+                        : "md:bg-transparent md:text-white/90 md:hover:bg-white/15 md:hover:text-white"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               </li>
-            ))}
+              );
+            })}
             <li className="md:ml-2">
               <Link
                 href="/contact"
