@@ -9,7 +9,7 @@ const portfolioItems = [
   {
     title: "4-Bedroom Private Duplex",
     category: "Residential",
-    image: "/wossade_four.jpeg",
+    image: "/wossade-bodija-duplex.jpg",
     description:
       "A premium detached duplex constructed in the heart of Bodija, featuring all rooms ensuite, modern interior finishes, and high-grade building materials.",
   },

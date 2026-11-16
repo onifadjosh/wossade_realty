@@ -6,7 +6,7 @@ const projects = [
   {
     title: "4-Bedroom Private Duplex",
     location: "Bodija, Ibadan",
-    image: "/wossade_four.jpeg",
+    image: "/wossade-bodija-duplex.jpg",
     description:
       "A premium detached duplex in Bodija, with every room ensuite, modern interior finishes, and high-grade building materials.",
   },
